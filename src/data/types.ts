@@ -1,4 +1,4 @@
-interface review {
+export interface review {
     id: number;
     author: string;
     text: string;
@@ -6,7 +6,7 @@ interface review {
     pfp?: string;
 }
 
-interface reviewList {
+export interface reviewList {
     id: number;
     reviews: review[];
 }
