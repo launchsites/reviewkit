@@ -6,7 +6,6 @@ export interface review {
     pfp?: string;
 }
 
-export interface reviewList {
-    id: number;
-    reviews: review[];
-}
+// export interface reviewList {
+//     reviews: review[];
+// }

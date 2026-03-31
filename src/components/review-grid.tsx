@@ -1,5 +1,7 @@
-import type {review, reviewList} from "../data/types"
+import type {review} from "../data/types"
 
-export default function reviewGrid(reviewList: reviewList) {
-
+export default function ReviewGrid(reviews: review[]) {
+    return(
+        <p>reviewgrid</p>
+    )
 }

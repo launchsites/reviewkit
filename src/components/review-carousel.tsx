@@ -1,5 +1,7 @@
-import type {review, reviewList} from "../data/types"
+import type {review} from "../data/types"
 
-export default function reviewCarousel(reviewList: reviewList) {
-
+export default function ReviewCarousel(reviews: review[]) {
+    return(
+        <p>review carousel</p>
+    )
 }
