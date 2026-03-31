@@ -2,6 +2,6 @@ import type {review} from "../data/types"
 
 export default function ReviewCard(reviews: review[]) {
     return(
-        <p></p>
+        <p>hi</p>
     )
 }
