@@ -6,3 +6,7 @@ interface review {
     pfp?: string;
 }
 
+interface reviewList {
+    id: number;
+    reviews: review[];
+}
