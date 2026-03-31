@@ -4,8 +4,10 @@
   "description": "",
   "main": "./dist/index.js",
   "scripts": {
-    "build": "tsc",
-    "dev": "npm --prefix testing run dev"
+    "build": "npm run build:js && npm run build:css",
+    "dev": "npm --prefix testing run dev",
+    "build:js": "tsc",
+    "build:css": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/styles.css --minify"
   },
   "repository": {
     "type": "git",
@@ -21,13 +23,26 @@
   "homepage": "https://github.com/launchsites/reviewkit#readme",
   "types": "./dist/index.d.ts",
   "peerDependencies": {
-    "react": "^18.2.0 || ^19.0.0"
+    "react": "^18.2.0 || ^19.0.0",
+    "react-dom": "^18.2.0 || ^19.0.0"
   },
   "devDependencies": {
+    "@tailwindcss/cli": "^4.2.2",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
+    "tailwindcss": "^4.2.2",
     "typescript": "^6.0.2"
-  }
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./styles.css": "./dist/styles.css"
+  },
+  "sideEffects": [
+    "**/*.css"
+  ]
 }
